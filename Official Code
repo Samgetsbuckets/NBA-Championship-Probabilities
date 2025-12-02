@@ -39,7 +39,7 @@ FLATTEN_EXPONENT      = 0.89
 OKC_RATING_BONUS      = 0.35
 CAVS_RATING_PENALTY   = 0.30
 MEMPHIS_NERF          = 0.60
-PACERS_MEGA_BOOST     = 0.18
+PACERS_BOOST          = 0.18
 PACERS_BONUS          = 0.08
 
 # Age & Experience
@@ -211,7 +211,7 @@ for i in df.index:
         df.loc[i,"__BaseRating__"]-=0.20 * clutch_z[i]
 
     if "pacers" in name:
-        df.loc[i,"__BaseRating__"]+=PACERS_BONUS + PACERS_MEGA_BOOST
+        df.loc[i,"__BaseRating__"]+=PACERS_BONUS + PACERS_BOOST
 
     if "warriors" in name:
         df.loc[i,"__BaseRating__"]+=WARRIORS_EXPERIENCE_BONUS
